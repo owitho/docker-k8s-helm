@@ -9,7 +9,7 @@ RUN apk add --no-cache --virtual .build-deps \
     mv linux-amd64/helm /usr/local/bin && \
     rm -f /helm-${HELM_LATEST_VERSION}-linux-amd64.tar.gz
 
-RUN curl -fSL https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/50452/cn_zh/1524643963683/ossutil64 -o /usr/local/bin/ossutil && \
+RUN curl -fSL http://gosspublic.alicdn.com/ossutil/1.4.2/ossutil64 -o /usr/local/bin/ossutil && \
     chmod +x /usr/local/bin/ossutil && \
     apk del .build-deps
 
